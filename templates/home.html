@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Diabetes Prediction</title>
+
+
+
+    <style>
+        *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+h1{
+    padding: 20px;
+
+    background-color:#28B5B5;
+    color: white;
+    text-align: center;
+}
+.container{
+    background-color: #2F5D62;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+    height: 680px;
+}
+.form{
+    padding: 30px;
+    border-radius: 15px;
+    /* background-color: aqua; */
+    width: 40%;
+    /* height: 50vh; */
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.form-input{
+    font-size: medium;
+    border: 2px solid white;
+    width: 20vw;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.btn{
+    padding: 5px;
+    border-radius: 8px;
+}
+.form-input:hover{
+    background-color: #87A8A4;
+    border: 2px solid black;
+}
+.btn:hover{
+    background-color:#316B83;
+}
+    </style>
+
+
+</head>
+<body>
+        <h1> Diabetes Predictor </h1>
+       
+    
+    
+    <div class ="container">
+        <form class="form" action="{{ url_for('predict')}}"method="POST">
+            <input class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 80"><br>
+            <input class="form-input" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80"><br>
+            <input class="form-input" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
+            <input class="form-input" type="text" name="age" placeholder="Age (years) eg. 34"><br>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    </div>
+<br><br>
+
+
+
+</body>
+</html>

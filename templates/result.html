@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result </title>
+
+ <style>
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    background-color: lightblue;
+}
+.header{    
+    padding: 20px;
+
+    background-color:#28B5B5;
+    color: white;
+    text-align: center;
+}
+.full-box {
+    background-color: cyan;
+    width: 40vw;
+    margin: auto;
+    margin-top: 5vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 50px;
+
+}
+.img{
+    width: 50%;
+    height: 50%;
+    padding: 30px;
+    margin: auto;
+}
+h2{
+    text-align: center;
+    padding: 50px;
+}
+
+ </style>
+    
+</head>
+<body>
+
+    <h1 class='header'> Result Prediction</h1>
+   
+    <div id='full-box' >
+    
+
+    {%if prediction == 0%}
+    <h2>Prediction: You don't have Diabetes </h2>
+    {% elif prediction== 1%}
+		<h2>Prediction: OOPS! You have Diabetes</h2>
+       
+
+    {% endif %}
+
+
+    </div>
+</body>
+</html>
